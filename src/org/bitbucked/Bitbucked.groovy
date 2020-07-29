@@ -1,6 +1,6 @@
 package org.bitbucked
 
-class Bitbacked {
+class Bitbucked {
   
 }
 
