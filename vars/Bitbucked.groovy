@@ -48,5 +48,7 @@ def getRepoBranches() {
 
         // Close the stream
         inputStream.close()
+	
+	return branchesJson
     }
 
