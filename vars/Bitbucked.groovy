@@ -1,17 +1,14 @@
-def getRepoBranches(String organization, String repository ) {
+def getRepoBranches(String organization, String repository, String credentials ) {
 
         String baseUrl = "https://api.bitbucket.org"
                 
         String version = "2.0"
-        //String organization = "den77033"
-        //String repository = "jira-plugin"
-
+       
         // put it all together
         String branchesUrl = [baseUrl, version, "repositories", organization, repository, "refs", "branches"].join("/")
-                
-                
+                              
         withCredentials([
-            usernamePassword(credentialsId: 'bitbucket',
+            usernamePassword(credentialsId: credentials,
             usernameVariable: 'username',
             passwordVariable: 'password')
         ]) {
