@@ -50,6 +50,6 @@ def getRepoBranches() {
         // Close the stream
         inputStream.close()
 	
-	return branchesJson.values.name.toString()
+	return branchesJson.values.name
     }
 
