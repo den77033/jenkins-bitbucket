@@ -1,4 +1,4 @@
-def getRepoBranches(String organization) {
+def getRepoBranches(organization) {
 
         String baseUrl = "https://api.bitbucket.org"
                 
