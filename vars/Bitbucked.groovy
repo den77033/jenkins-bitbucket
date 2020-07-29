@@ -45,12 +45,11 @@ def getRepoBranches() {
 
         // Get JSON output
         def branchesJson = new groovy.json.JsonSlurper().parseText(inputStream.text)
-	assert branchesJson instanceof Map
-        assert branchesJson.name instanceof List
+
 
         // Close the stream
         inputStream.close()
 	
-	return branchesJson.name.toString()
+	return branchesJson.values.toString()
     }
 
