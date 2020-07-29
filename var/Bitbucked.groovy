@@ -1,6 +1,4 @@
-class Bitbucked {
-
-    def getRepoBranches() {
+def getRepoBranches() {
 
         String baseUrl = "https://api.bitbucket.org"
                 
@@ -52,4 +50,3 @@ class Bitbucked {
         inputStream.close()
     }
 
-}
