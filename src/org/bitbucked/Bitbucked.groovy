@@ -1,5 +1,9 @@
 package org.bitbucked
 
+class Bitbacked {
+  
+}
+
 def getRepoBranches() {
 
     String baseUrl = "https://api.bitbucket.org"
