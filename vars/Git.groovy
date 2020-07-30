@@ -13,10 +13,7 @@ class Git implements Serializable {
         this.credentials = credentials
     }
 
-    Git(script) {
-        this.script = script
-        this.sh = new Sh(script)
-    }
+
 
     /**
      * You can set the timeout between retries, when git calls with credentials fail. The default is 500 ms.
