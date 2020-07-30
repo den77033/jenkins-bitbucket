@@ -1,4 +1,4 @@
-def gitPush(String credentials, String userEmail, String repository) {
+def gitPush(String credentials, String userEmail, String repository, String branch) {
   
       withCredentials([
             usernamePassword(credentialsId: credentials,
@@ -22,6 +22,6 @@ def gitPush(String credentials, String userEmail, String repository) {
 	sh 'git add .'
 	sh "git commit -m 'new build $BUILD_NUMBER'  "
 	
-	sh "git push https://$USER:$PASSWORD@bitbucket.org/$USER/$repository HEAD:$BRANCH_NAME" 
+	sh "git push https://$USER:$PASSWORD@bitbucket.org/$USER/$repository HEAD:$branch" 
 
 }
