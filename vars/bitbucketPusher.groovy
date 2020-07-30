@@ -18,5 +18,8 @@ def gitPush(String credentials, String userEmail) {
 	
 	sh "git config --global user.name $USER"
 	sh "git config --global user.email $userEmail"
+	
+	sh 'git add .'
+	sh "git commit -m 'new build $BUILD_NUMBER'  "
 
 }
