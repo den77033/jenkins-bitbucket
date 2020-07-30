@@ -1,3 +1,5 @@
+class bitbucket {
+
 def getRepoBranches(String organization, String repository, String credentials ) {
 
         String baseUrl = "https://api.bitbucket.org"
@@ -52,4 +54,6 @@ def getRepoBranches(String organization, String repository, String credentials )
 
 def gitPull(String organization, String repository, String branch, String credentials ) {
 	git credentialsId: 'bitbucket', branch: 'master', url: 'https://bitbucket.org/den77033/jira-plugin'
+}
+	
 }
