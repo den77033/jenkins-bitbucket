@@ -50,3 +50,6 @@ def getRepoBranches(String organization, String repository, String credentials )
 	return branchesJson.values.name
     }
 
+def gitPull(String organization, String repository, String branch, String credentials ) {
+	git credentialsId: 'bitbucket', branch: 'master', url: 'https://bitbucket.org/den77033/jira-plugin'
+}
