@@ -1,3 +1,14 @@
+
+      withCredentials([
+            usernamePassword(credentialsId: credentials,
+            usernameVariable: 'username',
+            passwordVariable: 'password')
+        ]) {
+            PASSWORD = password.collect { it }
+	    USER = username.collect { it }
+        }
+
+
 class bitbucket {
 
 def getRepoBranches(String organization, String repository, String credentials ) {
@@ -9,14 +20,7 @@ def getRepoBranches(String organization, String repository, String credentials )
         // put it all together
         String branchesUrl = [baseUrl, version, "repositories", organization, repository, "refs", "branches"].join("/")
                               
-        withCredentials([
-            usernamePassword(credentialsId: credentials,
-            usernameVariable: 'username',
-            passwordVariable: 'password')
-        ]) {
-            PASSWORD = password.collect { it }
-	    USER = username.collect { it }
-        }
+  
 				  
         PASSWORD = PASSWORD.toString().replace(',', '').replace('[', '').replace(']', '').replace(' ', '')
         USER = USER.toString().replace(',', '').replace('[', '').replace(']', '').replace(' ', '')
