@@ -1,4 +1,4 @@
-def gitPush(String credentials) {
+def gitPush(String credentials, String userEmail) {
   
       withCredentials([
             usernamePassword(credentialsId: credentials,
@@ -15,5 +15,8 @@ def gitPush(String credentials) {
                 
         String username = USER
         String password = PASSWORD
+	
+	sh "git config --global user.name $USER"
+	sh "git config --global user.email $userEmail"
 
 }
